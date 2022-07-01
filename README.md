@@ -12,7 +12,6 @@ Prerequisites and Testing Environment! AWS Account, Cli, EKS, ECS, kubectl, eksc
 2. Create a new docker image using local Docker Desktop and push to ECR.
    2.1 docker build -t sample-tomcat-hello .
    2.2 docker images
-    ------
    2.3 aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin accID.ecr.ap-southeast-1.amazonaws.com
    2.4 docker tag yourlocalimageid public.ecr.aws/n9xxxv0/reponame:imagename
    2.5 docker push public.ecr.aws/n9q3x4v0/reponame:imagename

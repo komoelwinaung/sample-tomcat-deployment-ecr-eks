@@ -16,7 +16,8 @@ Prerequisites and Testing Environment! AWS Account, Cli, EKS, ECS, kubectl, eksc
    2.4 docker tag yourlocalimageid public.ecr.aws/n9xxxv0/reponame:imagename
    2.5 docker push public.ecr.aws/n9q3x4v0/reponame:imagename
    
-3. Then, deploy a new pod using your ECR image in AWS EKS - kubectl apply -f hello.yaml 
-  3.1 expose your service with ELB - kubectl expose deployment/hello --port 80 --target-port 80 --name hello-service --type LoadBalancer
+3. Then, deploy a new pod using your ECR image in AWS EKS
+* kubectl apply -f hello.yaml 
+* expose your service with ELB - kubectl expose deployment/hello --port 80 --target-port 80 --name hello-service --type LoadBalancer
 
 Finally, browse your ELB url, can see your sample deployment page. That's it. Thanks!

@@ -10,11 +10,11 @@ Prerequisites and Testing Environment! AWS Account, Cli, EKS, ECS, kubectl, eksc
 1. Create a new repo in AWS ECR.
 
 2. Create a new docker image using local Docker Desktop and push to ECR.
-   2.1 docker build -t sample-tomcat-hello .
-   2.2 docker images
-   2.3 aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin accID.ecr.ap-southeast-1.amazonaws.com
-   2.4 docker tag yourlocalimageid public.ecr.aws/n9xxxv0/reponame:imagename
-   2.5 docker push public.ecr.aws/n9q3x4v0/reponame:imagename
+   * docker build -t sample-tomcat-hello .
+   * docker images
+   * aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin accID.ecr.ap-southeast-1.amazonaws.com
+   * docker tag yourlocalimageid public.ecr.aws/n9xxxv0/reponame:imagename
+   * docker push public.ecr.aws/n9q3x4v0/reponame:imagename
    
 3. Then, deploy a new pod using your ECR image in AWS EKS
 * kubectl apply -f hello.yaml 
